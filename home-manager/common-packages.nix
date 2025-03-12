@@ -32,7 +32,7 @@
     xfce.thunar
     xfce.thunar-archive-plugin
     xfce.thunar-media-tags-plugin
-    xfce.thunar-vcs-plugin
+    # xfce.thunar-vcs-plugin
     xfce.thunar-volman
     xfce.tumbler
 
