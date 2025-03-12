@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, inputs, ... }: {
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
@@ -24,6 +24,7 @@
     ventoy-full
     vesktop
     vscode
+    inputs.zen-browser.packages.${pkgs.system}.default
 
     # Thunar stuff
     ffmpegthumbnailer

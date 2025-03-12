@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./android-studio.nix
     ./home-packages.nix
   ];
 }

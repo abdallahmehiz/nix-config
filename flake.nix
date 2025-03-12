@@ -7,9 +7,10 @@
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    zen-browser.url = "github:youwen5/zen-browser-flake";
   };
   
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: let
+  outputs = { self, nixpkgs, home-manager, zen-browser, ... }@inputs: let
     system = "x86_64-linux";
     homeStateVersion = "24.11";
     user = "abdallah";

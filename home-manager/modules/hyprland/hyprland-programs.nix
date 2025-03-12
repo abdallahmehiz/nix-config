@@ -1,8 +1,10 @@
 {pkgs, ...}:
 {
   home.packages = with pkgs; [
-    hyprshot
     hyprcursor
+    hypridle
+    hyprlock
+    hyprshot
     hyprsunset
     pyprland
   ];

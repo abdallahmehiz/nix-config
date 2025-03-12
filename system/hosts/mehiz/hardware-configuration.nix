@@ -27,6 +27,12 @@
   swapDevices =
     [ { device = "/dev/disk/by-uuid/c1f340d2-daf6-4f94-8e14-66cfc16ff584"; }
     ];
+  
+  fileSystems."/mnt/bigo" = 
+    {
+      device = "/dev/sda1";
+      fsType = "ntfs";
+    };
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
@@ -35,7 +41,6 @@
   networking.useDHCP = lib.mkDefault true;
   # networking.interfaces.enp2s0.useDHCP = lib.mkDefault true;
   # networking.interfaces.wlp0s20f0u1.useDHCP = lib.mkDefault true;
-
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
