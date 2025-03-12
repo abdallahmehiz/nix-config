@@ -1,0 +1,56 @@
+{
+  description = "my shit system config";
+  
+  inputs = {
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
+    home-manager = {
+      url = "github:nix-community/home-manager/release-24.11";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+  };
+  
+  outputs = { self, nixpkgs, home-manager, ... }@inputs: let
+    system = "x86_64-linux";
+    homeStateVersion = "24.11";
+    user = "abdallah";
+    cursor = "Posy_Cursor_Mono";
+    hosts = [
+      { hostname = "mehiz"; stateVersion = "unstable"; }
+      { hostname = "mehiz-portable"; stateVersion = "24.11"; }
+    ];
+    
+    makeSystem = { hostname, stateVersion }: nixpkgs.lib.nixosSystem {
+      system = system;
+      specialArgs = {
+        inherit inputs stateVersion hostname user;
+      };
+      modules = [
+        ./system/hosts/${hostname}/configuration.nix
+      ];
+    };
+    
+    makeHomeConfig = hostname: home-manager.lib.homeManagerConfiguration {
+      pkgs = nixpkgs.legacyPackages.${system};
+      extraSpecialArgs = {
+        inherit inputs homeStateVersion user hostname cursor;
+      };
+      modules = [
+        ./home-manager/home.nix
+        ./home-manager/hosts/${hostname}/default.nix
+      ];
+    };
+    
+  in {
+    nixosConfigurations = nixpkgs.lib.foldl' (configs: host:
+      configs // {
+        "${host.hostname}" = makeSystem {
+          inherit (host) hostname stateVersion;
+        };
+      }) {} hosts;
+    
+    homeConfigurations = nixpkgs.lib.foldl' (configs: host:
+      configs // {
+        "${user}@${host.hostname}" = makeHomeConfig host.hostname;
+      }) {} hosts;
+  };
+}

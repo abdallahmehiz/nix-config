@@ -1,0 +1,12 @@
+[pyprland]
+
+plugins = [
+  "scratchpads",
+  "magnify",
+]
+
+[scratchpads.term]
+animation = "fromTop"
+command = "kitty --app-id foot-dropterm"
+class = "kitty-dropterm"
+size = "75% 60%"

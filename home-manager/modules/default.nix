@@ -1,0 +1,25 @@
+{
+  imports = [
+    ./cursor.nix
+    ./eza.nix
+    ./gaming.nix
+    ./git.nix
+    ./gtk.nix
+    ./hyprland
+    ./kitty.nix
+    ./lazygit.nix
+    ./mime.nix
+    ./mpv
+    ./qt.nix
+    ./ranger.nix
+    ./starship.nix
+    ./swaync
+    ./tmux.nix
+    ./neovim
+    ./nixvim.nix
+    ./waybar
+    ./wlogout
+    ./wofi
+    ./zsh.nix
+  ];
+}
