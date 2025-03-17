@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./boot.nix
     ./docker.nix
     ./gaming.nix
     ./hardware-configuration.nix

@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./boot.nix
     ./hardware-configuration.nix
     ./local-packages.nix
     ../../modules

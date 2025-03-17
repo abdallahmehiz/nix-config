@@ -1,6 +1,7 @@
 {
   imports = [
     ./audio.nix
+    ./boot.nix
     ./desktop-environment.nix
     ./fonts.nix
     ./general.nix

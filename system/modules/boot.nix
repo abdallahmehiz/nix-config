@@ -2,13 +2,13 @@
   boot = {
     loader = {
       efi = {
-        canTouchEfiVariables = true;
         efiSysMountPoint = "/boot";
+        canTouchEfiVariables = false;
       };
       grub = {
         enable = true;
         efiSupport = true;
-        # efiInstallAsRemovable = true;
+        efiInstallAsRemovable = true;
         device = "nodev";
       };
     };
