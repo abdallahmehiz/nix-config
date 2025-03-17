@@ -8,10 +8,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     zen-browser.url = "github:youwen5/zen-browser-flake";
-    stylix.url = "github:danth/stylix/release-24.11";
   };
   
-  outputs = { self, nixpkgs, home-manager, zen-browser, stylix, ... }@inputs: let
+  outputs = { self, nixpkgs, home-manager, zen-browser, ... }@inputs: let
     system = "x86_64-linux";
     homeStateVersion = "24.11";
     user = "abdallah";
@@ -28,7 +27,7 @@
       };
       modules = [
         ./system/hosts/${hostname}/configuration.nix
-        stylix.nixosModules.stylix
+        home-manager.nixosModules.default
       ];
     };
     

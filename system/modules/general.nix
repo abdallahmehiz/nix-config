@@ -2,12 +2,22 @@
 {
   time.timeZone = "Africa/Algiers";
   i18n.defaultLocale = "en_US.UTF-8";
+  boot.kernelPackages = pkgs.linuxPackages_zen;
 
   security.sudo.wheelNeedsPassword = false;
   nix.settings.trusted-users = [
     "root"
     "@wheel"
   ];
+
+  environment.sessionVariables = rec {
+    TERMINAL = "kitty";
+    EDITOR = "nvim";
+    XDG_BIN_HOME = "$HOME/.local/bin";
+    PATH = [
+      "${XDG_BIN_HOME}"
+    ];
+  };
 
   services.printing = {
     enable = true;

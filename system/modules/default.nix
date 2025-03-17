@@ -1,14 +1,9 @@
 {
   imports = [
     ./audio.nix
-    ./display-manager.nix
-    ./env.nix
+    ./desktop-environment.nix
     ./fonts.nix
     ./general.nix
-    ./home-manager.nix
-    ./hyprland.nix
-    ./kde-plasma.nix
-    ./kernel.nix
     ./mime.nix
     ./network.nix
     ./nix.nix

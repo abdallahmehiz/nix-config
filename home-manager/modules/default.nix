@@ -15,6 +15,7 @@
     ./swaync
     ./tmux.nix
     ./neovim
+    ./wallpaper
     ./waybar
     ./wlogout
     ./wofi
