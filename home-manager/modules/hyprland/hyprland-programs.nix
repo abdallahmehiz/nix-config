@@ -4,6 +4,7 @@
     hyprcursor
     hypridle
     hyprlock
+    hyprpicker
     hyprshot
     hyprsunset
     pyprland

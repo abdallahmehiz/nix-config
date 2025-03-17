@@ -9,4 +9,5 @@
       wayland.enable = true;
     };
   };
+  security.pam.services.sddm.enableGnomeKeyring = true;
 }

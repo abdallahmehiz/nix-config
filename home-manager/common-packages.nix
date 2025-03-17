@@ -4,7 +4,6 @@
   home.packages = with pkgs; [
     # Desktop apps
     chromium
-    dolphin
     filezilla
     firefox
     gimp-with-plugins
@@ -15,9 +14,11 @@
     libreoffice
     librewolf
     libsForQt5.gwenview
+    libsForQt5.dolphin
     netlogo
     networkmanagerapplet
     pavucontrol
+    pgadmin4-desktopmode
     qbittorrent
     telegram-desktop
     thunderbird
@@ -33,7 +34,6 @@
     xfce.thunar
     xfce.thunar-archive-plugin
     xfce.thunar-media-tags-plugin
-    # xfce.thunar-vcs-plugin
     xfce.thunar-volman
     xfce.tumbler
 
@@ -42,36 +42,20 @@
     brightnessctl
     btop
     cliphist
-    ffmpeg
+    feh
     fzf
-    gcc
     gdu
     gh
-    gnome-tweaks
-    go
     gtk3
-    htop
     imagemagick
-    jq
-    libnotify
-    lua
-    luarocks
     mediainfo
-    nh
-    nodejs
     pamixer
-    python3Full
     qrencode
-    rclone
     tree
-    unrar
-    unzip
-    wget
     wl-clipboard
-    wtype
+    wrk
     yt-dlp
     zathura
-    zip
 
     # WM stuff
     libsForQt5.xwaylandvideobridge
@@ -80,10 +64,9 @@
     xdg-desktop-portal-hyprland
 
     # Other
-    bemoji
-    nerdfonts
     nixfmt-rfc-style
     nix-prefetch-scripts
+    pcmanfm-qt
 
     # CLI games?
     asciiquarium

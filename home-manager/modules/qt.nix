@@ -7,8 +7,8 @@
     enable = true;
     platformTheme.name = "gtk";
     style = {
-      package = pkgs.libsForQt5.breeze-qt5;
-      name = "gtk2";
+      package = pkgs.libsForQt5.breeze-gtk;
+      name = "gtk3";
     };
   };
 }

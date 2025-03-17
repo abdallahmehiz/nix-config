@@ -8,6 +8,7 @@
     ./hardware-configuration.nix
     ./local-packages.nix
     ./qemu.nix
+    ./ssh.nix
     ../../modules
   ];
 

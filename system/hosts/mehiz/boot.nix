@@ -1,14 +1,19 @@
 {
-  boot.loader = {
-    efi = {
-      canTouchEfiVariables = true;
-      efiSysMountPoint = "/boot";
+  boot = {
+    loader = {
+      efi = {
+        canTouchEfiVariables = true;
+        efiSysMountPoint = "/boot";
+      };
+      grub = {
+        enable = true;
+        efiSupport = true;
+        # efiInstallAsRemovable = true;
+        device = "nodev";
+      };
     };
-    grub = {
+    plymouth = {
       enable = true;
-      efiSupport = true;
-      # efiInstallAsRemovable = true;
-      device = "nodev";
     };
   };
 }

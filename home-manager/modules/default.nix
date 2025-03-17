@@ -8,18 +8,17 @@
     ./hyprland
     ./kitty.nix
     ./lazygit.nix
-    ./mime.nix
-    ./mpv
+    ./mpv.nix
     ./qt.nix
     ./ranger.nix
     ./starship.nix
     ./swaync
     ./tmux.nix
     ./neovim
-    ./nixvim.nix
     ./waybar
     ./wlogout
     ./wofi
+    ./zed.nix
     ./zsh.nix
   ];
 }

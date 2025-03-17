@@ -1,13 +1,22 @@
 {pkgs, ...}:
 {
   environment.systemPackages = with pkgs; [
-    qemu
+    qemu_full
     virtio-win
     virt-manager
   ];
 
   programs.virt-manager.enable = true;
-  virtualisation.libvirtd.enable = true;
+  virtualisation.libvirtd = {
+    enable = true;
+    qemu = {
+      swtpm.enable = true;
+      ovmf = {
+        enable = true;
+        packages = [ pkgs.OVMFFull.fd ];
+      };
+    };
+  };
   virtualisation.spiceUSBRedirection.enable = true;
 
   # UEFI firmware support

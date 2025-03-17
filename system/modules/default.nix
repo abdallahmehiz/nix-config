@@ -4,16 +4,16 @@
     ./display-manager.nix
     ./env.nix
     ./fonts.nix
+    ./general.nix
     ./home-manager.nix
     ./hyprland.nix
+    ./kde-plasma.nix
     ./kernel.nix
     ./mime.nix
     ./network.nix
     ./nix.nix
     ./packages.nix
-    ./tz.nix
     ./user.nix
     ./wine.nix
   ];
 }
-

@@ -1,4 +1,0 @@
-{
-  time.timeZone = "Africa/Algiers";
-}
-

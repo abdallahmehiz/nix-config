@@ -11,7 +11,7 @@
         "XDG_CURRENT_DESKTOP,Hyprland"
         "XDG_SESSION_TYPE,wayland"
         "XDG_SESSION_DESKTOP,Hyprland"
-        "QT_QPA_PLATFORM,wayland"
+        "QT_QPA_PLATFORM,xcb"
         "XDG_SCREENSHOTS_DIR,$HOME/pictures/screenshots"
       ];
 
@@ -27,7 +27,7 @@
       exec-once = [
         "waybar"
         "hyprsunset"
-	      "hyprctl setcursor \"${cursor}\" 24"
+        "hyprctl setcursor \"${cursor}\" 24"
         "pypr"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"

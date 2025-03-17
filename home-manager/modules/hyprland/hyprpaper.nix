@@ -1,5 +1,4 @@
+{ pkgs, ...}:
 {
-  services.hyprpaper = {
-    enable = true;
-  };
+  services.hyprpaper.enable = true;
 }

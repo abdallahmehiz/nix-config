@@ -7,13 +7,9 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
-    prezto = {
+    oh-my-zsh = {
       enable = true;
-      caseSensitive = false;
-      editor = {
-        keymap = "vi";
-        promptContext = true;
-      };
+      plugins = [ "docker" "git" "sudo" ];
     };
 
     shellAliases = {

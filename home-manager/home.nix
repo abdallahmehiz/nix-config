@@ -9,6 +9,7 @@
     username = user;
     homeDirectory = "/home/${user}";
     stateVersion = homeStateVersion;
+    enableNixpkgsReleaseCheck = false; 
   };
 
   programs.home-manager = {
