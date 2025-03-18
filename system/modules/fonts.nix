@@ -12,8 +12,6 @@
       nerd-fonts.meslo-lg
       noto-fonts
       noto-fonts-lgc-plus
-      powerline-fonts
-      powerline-symbols
       roboto
       twemoji-color-font
     ];

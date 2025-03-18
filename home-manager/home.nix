@@ -1,4 +1,10 @@
-{ homeStateVersion, config, pkgs, user, hostname, ... }: {
+{
+  homeStateVersion,
+  user,
+  hostname,
+  ...
+}:
+{
   imports = [
     ./common-packages.nix
     ./modules
@@ -9,7 +15,7 @@
     username = user;
     homeDirectory = "/home/${user}";
     stateVersion = homeStateVersion;
-    enableNixpkgsReleaseCheck = false; 
+    enableNixpkgsReleaseCheck = false;
   };
 
   programs.home-manager = {

@@ -1,3 +1,3 @@
 {
-    home.file.".config/hypr/pyprland.toml".source = ./pyprland.toml;
+  home.file.".config/hypr/pyprland.toml".source = ./pyprland.toml;
 }

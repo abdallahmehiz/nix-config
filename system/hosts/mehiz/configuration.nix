@@ -1,5 +1,9 @@
-{ pkgs, stateVersion, hostname, ... }:
-
+{
+  pkgs,
+  stateVersion,
+  hostname,
+  ...
+}:
 {
   imports = [
     ./docker.nix
@@ -17,4 +21,3 @@
 
   system.stateVersion = stateVersion;
 }
-

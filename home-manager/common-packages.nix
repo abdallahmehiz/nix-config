@@ -1,31 +1,28 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, inputs, ... }:
+{
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
     # Desktop apps
     chromium
-    filezilla
     firefox
     gimp-with-plugins
-    gnome-system-monitor
     handbrake
     inkscape
+    inputs.zen-browser.packages.${pkgs.system}.default
     insomnia
     libreoffice
-    librewolf
     libsForQt5.gwenview
     libsForQt5.dolphin
     netlogo
     networkmanagerapplet
     pavucontrol
-    pgadmin4-desktopmode
     qbittorrent
     telegram-desktop
     thunderbird
     ventoy-full
     vesktop
     vscode
-    inputs.zen-browser.packages.${pkgs.system}.default
 
     # Thunar stuff
     ffmpegthumbnailer
